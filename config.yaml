@@ -1,0 +1,83 @@
+agents:
+  ChatBot:
+    name: ChatBot
+    type: SimpleChatAgent
+    description: A friendly chat bot for general conversation
+    enabled: true
+    max_concurrent_tasks: 1
+    timeout: 60.0
+    retry_attempts: 3
+    tools: []
+    
+  ToolUser:
+    name: ToolUser
+    type: ToolUsingAgent
+    description: An agent that can use various tools to accomplish tasks
+    enabled: true
+    max_concurrent_tasks: 2
+    timeout: 120.0
+    retry_attempts: 3
+    tools: [bash, file_read, file_write]
+    
+  CodeAnalyzer:
+    name: CodeAnalyzer
+    type: CodeAnalysisAgent
+    description: An agent specialized in code analysis and review
+    enabled: true
+    max_concurrent_tasks: 1
+    timeout: 180.0
+    retry_attempts: 2
+    tools: [file_read, bash]
+
+tools:
+  bash:
+    name: bash
+    type: BashTool
+    enabled: true
+    timeout: 30.0
+    max_memory_mb: 512
+    blocked_commands: [rm -rf, sudo, chmod 777, dd, mkfs]
+    require_confirmation: false
+    
+  file_read:
+    name: file_read
+    type: FileReadTool
+    enabled: true
+    timeout: 10.0
+    max_file_size_mb: 50
+    
+  file_write:
+    name: file_write
+    type: FileWriteTool
+    enabled: true
+    timeout: 10.0
+    max_file_size_mb: 50
+
+communication:
+  message_bus_type: memory
+  max_message_size: 1048576
+  message_retention_time: 3600.0
+  max_conversation_length: 1000
+
+security:
+  enable_sandbox: true
+  max_file_size_mb: 100
+  allowed_file_extensions: [.txt, .py, .js, .md, .json, .yaml]
+  require_auth: false
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  enable_console: true
+  file_path: agents.log
+  max_file_size_mb: 10
+  backup_count: 5
+
+global_environment:
+  PYTHONPATH: "."
+  AGENT_FRAMEWORK_VERSION: "0.1.0"
+
+metadata:
+  version: "0.1.0"
+  created_by: "Agent Framework"
+  description: "Example configuration for the agent framework"

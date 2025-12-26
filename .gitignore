@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+.eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ipynb_checkpoints/
+# Logs
+*.log
+agents.log
+npm-debug.log*
+# Environment
+.env
+.env.local
+.env.*.local
+# Configuration (local overrides)
+config.local.yaml
+!config.yaml
+# Documentation
+docs/_build/
+site/
+# OS
+Thumbs.db
+.Spotlight-V100
+# Package managers
+node_modules/
+package-lock.json
+yarn.lock
+# Database
+*.db
+*.sqlite3
