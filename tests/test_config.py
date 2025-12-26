@@ -2,7 +2,7 @@ import pytest
 import tempfile
 import os
 from pathlib import Path
-from agents.config import (
+from agten.config import (
     ConfigManager, FrameworkConfig, AgentConfig, ToolConfig,
     CommunicationConfig, SecurityConfig, LoggingConfig, ConfigFormat
 )

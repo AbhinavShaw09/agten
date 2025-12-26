@@ -1,9 +1,8 @@
 import pytest
 import asyncio
 from unittest.mock import Mock, AsyncMock, patch
-from agents.communication import MessageBus, CommunicationProtocol, ConversationState
-from agents.core import Message, MessageType, Agent, AgentStatus
-from agents.examples.agents import SimpleChatAgent
+from agten.communication import MessageBus, CommunicationProtocol, ConversationState
+from agten.core import Message, MessageType, Agent, AgentStatus
 
 
 class TestMessageBus:

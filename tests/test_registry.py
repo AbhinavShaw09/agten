@@ -1,9 +1,8 @@
 import pytest
 import asyncio
 from unittest.mock import Mock, AsyncMock
-from agents.registry import AgentRegistry
-from agents.core import Agent, Tool
-from agents.examples.agents import SimpleChatAgent, ToolUsingAgent
+from agten.registry import AgentRegistry
+from agten.core import Agent, Tool
 
 
 class TestAgentRegistry:

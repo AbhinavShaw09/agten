@@ -1,4 +1,4 @@
-agents:
+agten:
   ChatBot:
     name: ChatBot
     type: SimpleChatAgent

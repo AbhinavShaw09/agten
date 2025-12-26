@@ -16,9 +16,9 @@ A production-ready Python framework for building intelligent agents with reasoni
 
 ### Installation
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/agent-framework
-cd agent-framework
+# Clone repository
+git clone https://github.com/yourusername/agten-framework
+cd agten-framework
 
 # Install dependencies
 pip install -e .

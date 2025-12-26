@@ -1,7 +1,7 @@
 import pytest
 import asyncio
 from unittest.mock import Mock, AsyncMock, patch
-from agents.core import (
+from agten.core import (
     Agent,
     Tool,
     Message,
